@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/dp-guanggao/dp-guanggao"],{3046:function(a,t,n){"use strict";(function(a){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var n=getApp(),e={data:function(){return{guanggaostatus:"1",windowHeight:560,isend:!1,cpbtn:!1,hasLaunchedad:!1,pre_url:n.globalData.pre_url}},props:{guanggaourl:"",guanggaopic:"",guanggaotype:{default:"1"},param:{ggcover:0,ggskip:0,skiptype:1,cishu:0}},mounted:function(){var t=a.getSystemInfoSync();if(this.windowHeight=t.windowHeight,"h5"!=n.globalData.platform&&"mp"!=n.globalData.platform||(this.cpbtn=!0),0==this.param.cishu){var e=a.getStorageSync("hasLaunched");e||(this.hasLaunchedad=!0,a.setStorageSync("hasLaunched",!0))}else this.hasLaunchedad=!0,a.setStorageSync("hasLaunched",!1),a.setStorageSync("guanggacishu",0)},methods:{guanggaoClick:function(){this.guanggaostatus="0"},playend:function(a){this.guanggaostatus="0",this.isend=!0}}};t.default=e}).call(this,n("a821")["default"])},"8e20":function(a,t,n){"use strict";n.r(t);var e=n("3046"),u=n.n(e);for(var o in e)"default"!==o&&function(a){n.d(t,a,(function(){return e[a]}))}(o);t["default"]=u.a},a653:function(a,t,n){"use strict";n.r(t);var e=n("b882"),u=n("8e20");for(var o in u)"default"!==o&&function(a){n.d(t,a,(function(){return u[a]}))}(o);n("dab1");var c,i=n("f0c5"),s=Object(i["a"])(u["default"],e["b"],e["c"],!1,null,null,null,!1,e["a"],c);t["default"]=s.exports},b882:function(a,t,n){"use strict";var e;n.d(t,"b",(function(){return u})),n.d(t,"c",(function(){return o})),n.d(t,"a",(function(){return e}));var u=function(){var a=this,t=a.$createElement;a._self._c},o=[]},dab1:function(a,t,n){"use strict";var e=n("e685"),u=n.n(e);u.a},e685:function(a,t,n){}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/dp-guanggao/dp-guanggao-create-component',
+    {
+        'components/dp-guanggao/dp-guanggao-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('a821')['createComponent'](__webpack_require__("a653"))
+        })
+    },
+    [['components/dp-guanggao/dp-guanggao-create-component']]
+]);

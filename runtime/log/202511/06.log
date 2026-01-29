@@ -1,0 +1,5 @@
+[2025-11-06T19:18:11+08:00][info] array (
+  'file' => '/www/wwwroot/guang.ailiutang.cn/app/common/MapQQ.php286',
+  'status' => 112,
+  'message' => '来源IP未被授权，解决方法见：https://lbs.qq.com/faq/serverFaq/webServiceKey，当前IP：8.152.96.79',
+)

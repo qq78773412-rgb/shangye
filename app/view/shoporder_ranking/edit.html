@@ -1,0 +1,79 @@
+<!DOCTYPE html><!--custom_file(shoporder_ranking)-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>排行榜详情</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  {include file="public/css"/}
+</head>
+<body>
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-card layui-col-md12">
+          <div class="layui-card-header">
+            <div class="layui-tab layui-tab-brief">
+              {if $log && $log['givedata']}
+                <ul class="layui-tab-title">
+                  {foreach $log['givedata'] as $lk=>$lv}
+                    <li {if input('param.key')==$lk}class="layui-this"{/if} onclick="goto({$id},{$lk})">{$lv.name}</li>
+                  {/foreach}
+                </ul>
+              {/if}
+            </div>
+            <i class="layui-icon layui-icon-close" style="font-size:18px;font-weight:bold;cursor:pointer" onclick="closeself()"></i>
+          </div>
+          <div class="layui-card-body" pad15>
+            <div class="layui-col-md12">
+              <div style="text-align: center;">
+                <span style="font-size: 17px;">分红池总金额：</span>
+                <span style="font-size: 19px;margin-top: 10px;">{$log['poolmoney']}元</span>
+                <span style="font-size: 17px;margin-left: 20px">充值变动金额：</span>
+                <span style="font-size: 19px;margin-top: 10px;">{$log['changemoney']}元</span>
+                <span style="font-size: 17px;margin-left: 20px">实际分红池总金额：</span>
+                <span style="font-size: 19px;margin-top: 10px;">{$log['totalmoney']}元</span>
+
+                <span style="font-size: 17px;margin-left: 20px">{$detail['name']}总金额：</span>
+                <span style="font-size: 19px;margin-top: 10px;">{$detail['childmoney']}元</span>
+                <span style="font-size: 17px;margin-left: 20px">参与该分红池差距消费金额：</span>
+                <span style="font-size: 19px;margin-top: 10px;">{$detail['money']}元</span>
+              </div>
+              <table class="layui-table" lay-skin="line" lay-size="lg">
+                <thead>
+                  <tr>
+                    <th>姓名</th>
+                    <th>消费金额</th>
+                    <th>预估奖金</th>
+                    <th>是否发放奖金</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                  {if $detail && $detail['mlist']}
+                    {foreach $detail['mlist'] as $mk=>$mv}
+                      <tr>
+                        <td>
+                          <img src="{$mv.headimg}" style="width:40px;height: 40px;border-radius: 50% 50%;">
+                          {$mv.nickname}
+                        </td>
+                        <td>{$mv.summoney}元</td>
+                        <td>{$mv.avgmoney}元</td>
+                        <td>{$mv.issend && $mv.issend>0?'已发放':'未发放'}</td>
+                      </tr>
+                      {/foreach}
+                  {/if}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  {include file="public/js"/}
+  <script>
+    function goto(id,key){
+      location.href='{:url('edit')}/id/'+id+'/key/'+key;
+    }
+  </script>
+</body>
+</html>

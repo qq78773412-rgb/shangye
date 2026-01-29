@@ -1,0 +1,26 @@
+{
+    "appid": "23935205",
+    "appInfo": {},
+    "appkey": "",
+    "condition": {},
+    "setting": {
+        "urlCheck": true
+    },
+    "libVersion": "",
+    "projectname": "点大商城",
+    "host": "baiduboxapp",
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.970.2",
+            "extensionJsVersion": "1.21.2"
+        }
+    },
+    "compilation-args": {
+        "common": {
+            "quickPreview": true
+        },
+        "forceChanged": {
+            "quickPreview": true
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "出餐",
+  "usingComponents": {
+    "loading": "/components/loading/loading"
+  }
+}

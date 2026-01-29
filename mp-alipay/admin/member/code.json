@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "",
+  "pullRefresh": true,
+  "usingComponents": {
+    "popmsg": "/components/popmsg/popmsg",
+    "loading": "/components/loading/loading"
+  }
+}
